@@ -19,8 +19,11 @@ num = 0
 sleep_time = .2
 try:
     while True:
-        if GPIO.input(up) and num < 2 ** len(leds) - 1:
-            num += 1
+        if GPIO.input(up):
+            if num < 2 ** len(leds) - 1:
+                num += 1
+            else:
+                num = 0
             print(f"current number: DEC={num}, BIN={''.join(map(str, dec2bin(num)))}")
             sleep(sleep_time)
         if GPIO.input(down) and num > 0:
