@@ -40,6 +40,6 @@ if __name__ == "__main__":
         print("Выключение...")
     except Exception as e:
         print(f"Неизвестная ошибка: \"[{e.__class__.__name__}]: {e.args if len(e.args) > 0 else '<no args>'}\"")
-    finally:
-        GPIO.output(dac_bits, 0)
-        GPIO.cleanup()
+    
+    GPIO.output(dac_bits, 0)
+    GPIO.cleanup()

@@ -45,5 +45,5 @@ if __name__ == "__main__":
         print("Выключение...")
     except Exception as e:
         print(f"Неизвестная ошибка: \"[{e.__class__.__name__}]: {e.args if len(e.args) > 0 else '<no args>'}\"")
-    finally:
-        dac.__del__()
+    
+    dac.__del__()
