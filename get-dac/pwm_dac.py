@@ -29,7 +29,7 @@ class PWM_DAC:
         k = voltage / self.dynrange * 100
         if self.verbose:
             print(f"Коэффициент заполнения: {k:.1f}%")
-        self.pwm.ChangeDutyCycle(k) # self.set_number( * 255)
+        self.pwm.ChangeDutyCycle(k)
 
 
 if __name__ == "__main__":
@@ -46,4 +46,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Неизвестная ошибка: \"[{e.__class__.__name__}]: {e.args if len(e.args) > 0 else '<no args>'}\"")
     
-    dac.__del__()
+    # dac.__del__()

@@ -56,4 +56,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Неизвестная ошибка: \"[{e.__class__.__name__}]: {e.args if len(e.args) > 0 else '<no args>'}\"")
     
-    dac.__del__()
+    # dac.__del__()
