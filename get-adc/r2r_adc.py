@@ -51,6 +51,7 @@ class R2R_ADC:
         while left < right - 1:
             middle = (left + right) // 2
             self.number_to_dac(middle)
+            sleep(self.compare_time)
             if GPIO.input(self.comp_gpio):
                 right = middle
             else:
