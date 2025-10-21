@@ -6,7 +6,7 @@ voltage_values = list()
 time_values = list()
 sampling_periods = list()
 duration = 3.
-max_voltage = 3.56
+max_voltage = 5.20
 
 if __name__ == "__main__":
     try:
