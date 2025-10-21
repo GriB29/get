@@ -3,7 +3,7 @@ from time import sleep
 
 
 class R2R_ADC:
-    def __init__(self, dynamic_range: float, compare_time: float = .01, verbose: bool = False) -> None:
+    def __init__(self, dynamic_range: float, compare_time: float = 1e-3, verbose: bool = False) -> None:
         self.dynrange = dynamic_range
         self.compare_time = compare_time
         self.verbose = verbose
